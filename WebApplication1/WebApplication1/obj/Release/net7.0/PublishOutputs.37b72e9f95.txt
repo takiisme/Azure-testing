@@ -1,0 +1,13 @@
+C:\Users\Tai\AppData\Local\Temp\rider-publish14729397646911532806\WebApplication1.exe
+C:\Users\Tai\AppData\Local\Temp\rider-publish14729397646911532806\appsettings.Development.json
+C:\Users\Tai\AppData\Local\Temp\rider-publish14729397646911532806\appsettings.json
+C:\Users\Tai\AppData\Local\Temp\rider-publish14729397646911532806\WebApplication1.dll
+C:\Users\Tai\AppData\Local\Temp\rider-publish14729397646911532806\WebApplication1.deps.json
+C:\Users\Tai\AppData\Local\Temp\rider-publish14729397646911532806\WebApplication1.runtimeconfig.json
+C:\Users\Tai\AppData\Local\Temp\rider-publish14729397646911532806\WebApplication1.pdb
+C:\Users\Tai\AppData\Local\Temp\rider-publish14729397646911532806\Microsoft.AspNetCore.OpenApi.dll
+C:\Users\Tai\AppData\Local\Temp\rider-publish14729397646911532806\Microsoft.OpenApi.dll
+C:\Users\Tai\AppData\Local\Temp\rider-publish14729397646911532806\Newtonsoft.Json.dll
+C:\Users\Tai\AppData\Local\Temp\rider-publish14729397646911532806\Swashbuckle.AspNetCore.Swagger.dll
+C:\Users\Tai\AppData\Local\Temp\rider-publish14729397646911532806\Swashbuckle.AspNetCore.SwaggerGen.dll
+C:\Users\Tai\AppData\Local\Temp\rider-publish14729397646911532806\Swashbuckle.AspNetCore.SwaggerUI.dll
