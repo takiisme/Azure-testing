@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Tai\\RiderProjects\\WebApplication1\\WebApplication1\\WebApplication1.csproj": {}
+    "C:\\Users\\Tai\\OneDrive\\Desktop\\Azure_testing\\WebApplication1\\WebApplication1\\WebApplication1.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Tai\\RiderProjects\\WebApplication1\\WebApplication1\\WebApplication1.csproj": {
+    "C:\\Users\\Tai\\OneDrive\\Desktop\\Azure_testing\\WebApplication1\\WebApplication1\\WebApplication1.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Tai\\RiderProjects\\WebApplication1\\WebApplication1\\WebApplication1.csproj",
+        "projectUniqueName": "C:\\Users\\Tai\\OneDrive\\Desktop\\Azure_testing\\WebApplication1\\WebApplication1\\WebApplication1.csproj",
         "projectName": "WebApplication1",
-        "projectPath": "C:\\Users\\Tai\\RiderProjects\\WebApplication1\\WebApplication1\\WebApplication1.csproj",
+        "projectPath": "C:\\Users\\Tai\\OneDrive\\Desktop\\Azure_testing\\WebApplication1\\WebApplication1\\WebApplication1.csproj",
         "packagesPath": "C:\\Users\\Tai\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Tai\\RiderProjects\\WebApplication1\\WebApplication1\\obj\\",
+        "outputPath": "C:\\Users\\Tai\\OneDrive\\Desktop\\Azure_testing\\WebApplication1\\WebApplication1\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Tai\\AppData\\Roaming\\NuGet\\NuGet.Config"

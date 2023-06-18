@@ -2,7 +2,6 @@ using Microsoft.EntityFrameworkCore;
 using WebApplication1.Services;
 using DbContext = WebApplication1.DbContext;
 
-
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
@@ -14,6 +13,7 @@ builder.Services.AddSwaggerGen();
 builder.Services.AddDbContext<DbContext>(o => o.UseSqlServer(builder.Configuration.GetConnectionString("Db")));
 builder.Services.AddScoped<IMcpService, McpService>();
 builder.Services.AddScoped<IEmployeeService, EmployeeService>();
+builder.Services.AddScoped<IAuthenticateService, AuthenticateService>();
 builder.Services.AddSingleton<HelperService>();
 
 var app = builder.Build();
