@@ -1,5 +1,6 @@
 using Communications.Requests;
 using Microsoft.AspNetCore.Mvc;
+using Models;
 using WebApplication1.Services;
 
 namespace Controllers;
@@ -25,7 +26,7 @@ public class McpController: ControllerBase
         [HttpPost("postallMCP")]
         public async Task<IActionResult> PostAll(McpAddRequest mcpAddRequest)
         {
-                var (success, result) = await _mcpService.AddMcp(mcpAddRequest.Id);
+                var (success, result) = await _mcpService.AddMcp(mcpAddRequest.Id, mcpAddRequest.Capacity, mcpAddRequest.CurrentLoad);
                 return Ok("Post all: " + mcpAddRequest.Id);
         }
 
@@ -39,5 +40,13 @@ public class McpController: ControllerBase
         public IActionResult PostId(McpAddRequest mcpAddRequest)
         {
                 return Ok("Post ID: " + mcpAddRequest.Id);
+        }
+
+
+        [HttpGet("get-all-full-mcps")]
+        public List<Mcp> GetAllMCPAndSort()
+        {
+                var result = _mcpService.GetFullMcp();
+                return result;
         }
 }
