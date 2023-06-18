@@ -38,7 +38,7 @@ public class AuthenticateService : IAuthenticateService
 
         var id = 1;
         if (_dbContext.Accounts.Any())
-            id = _dbContext.Accounts.Max(x => x.Id);
+            id = _dbContext.Accounts.Max(x => x.Id) + 1;
                 
         var newAccount = new Account()
         {
