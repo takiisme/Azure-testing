@@ -9,6 +9,8 @@ public interface IMessageService
         string textContent);
 
     public Task<(bool success, object result)> UpdateMessageContent(int id, string textContent);
+
+    public List<Message> GetMessageIn24Hour();
 }
 
 public class MessageService : IMessageService
@@ -59,5 +61,13 @@ public class MessageService : IMessageService
 
         _dbContext.SaveChanges();
         return (true, "Success");
+    }
+
+    public List<Message> GetMessageIn24Hour()
+    {
+        var message =
+            _dbContext.Messages.Where(text => text.TextTime >= DateTime.Today.AddDays(-1) && text.TextTime <= DateTime.Now).ToList();
+        
+        return message;
     }
 }

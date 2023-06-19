@@ -1,5 +1,6 @@
 using Communications.Requests;
 using Microsoft.AspNetCore.Mvc;
+using Models;
 using WebApplication1.Services;
 
 namespace Controllers;
@@ -39,5 +40,12 @@ public class MessageController : ControllerBase
         }
         
         return Ok("Message content updated!");
+    }
+
+    [HttpGet("get-message-in-24-hour")]
+    public List<Message> GetMessageIn24Hour()
+    {
+        var result = _messageService.GetMessageIn24Hour();
+        return result;
     }
 }

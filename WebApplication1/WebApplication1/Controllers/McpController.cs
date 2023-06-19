@@ -61,4 +61,11 @@ public class McpController : ControllerBase
 
         return Ok("Mcp emptied!");
     }
+
+    [HttpGet("mcp-in-range")]
+    public List<Mcp> GetMcpInRange(McpInRangeRequest mcpInRangeRequest)
+    {
+        var result = _mcpService.GetMcpInRange(mcpInRangeRequest.Latitude, mcpInRangeRequest.Longitude, mcpInRangeRequest.Radius);
+        return result;
+    }
 }
