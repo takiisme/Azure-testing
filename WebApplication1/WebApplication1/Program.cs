@@ -15,6 +15,7 @@ builder.Services.AddScoped<IMcpService, McpService>();
 builder.Services.AddScoped<IEmployeeService, EmployeeService>();
 builder.Services.AddScoped<IAuthenticateService, AuthenticateService>();
 builder.Services.AddScoped<IMessageService, MessageService>();
+builder.Services.AddScoped<ITaskService, TaskService>();
 builder.Services.AddSingleton<HelperService>();
 
 var app = builder.Build();

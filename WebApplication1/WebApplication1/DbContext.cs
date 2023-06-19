@@ -11,4 +11,7 @@ public class DbContext : Microsoft.EntityFrameworkCore.DbContext
     public DbSet<Employee> Employees { get; set; }
     public DbSet<Account> Accounts { get; set; }
     public DbSet<Message> Messages { get; set; }
+    public DbSet<Models.Task> Tasks { get; set; }
+    
+    public DbSet<TaskIncludeMcp> TaskIncludeMcps { get; set; }
 }

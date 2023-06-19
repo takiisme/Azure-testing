@@ -29,4 +29,11 @@ public class HelperService
         var dbContext = scope.ServiceProvider.GetRequiredService<DbContext>();
         return dbContext.Messages.Any((x) => x.Id == messageId);
     }
+    
+    public bool DoesTaskIdExist(int taskId)
+    {
+        using var scope = _serviceScopeFactory.CreateScope();
+        var dbContext = scope.ServiceProvider.GetRequiredService<DbContext>();
+        return dbContext.Tasks.Any((x) => x.Id == taskId);
+    }
 }
