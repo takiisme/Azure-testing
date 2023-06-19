@@ -5,10 +5,10 @@ namespace WebApplication1.Services;
 public interface IEmployeeService
 {
     public Task<(bool success, object result)> AddEmployee(int id, string name, int gender, string role);
-    public Task<(bool success, object result)> DelEmployee(int id);
+    public Task<(bool success, object result)> DeleteEmployee(int id);
 }
 
-public class EmployeeService: IEmployeeService
+public class EmployeeService : IEmployeeService
 {
     private readonly DbContext _dbContext;
     private readonly HelperService _helperService;
@@ -32,14 +32,14 @@ public class EmployeeService: IEmployeeService
 
         _dbContext.Employees.Add(EmployeeInformation);
         _dbContext.SaveChanges();
-        
+
         return (true, message);
     }
 
-    public async Task<(bool success, object result)> DelEmployee(int id)
+    public async Task<(bool success, object result)> DeleteEmployee(int id)
     {
         var message = "Success";
-        if (!_helperService.DoesIdEmployeeExist(id))
+        if (!_helperService.DoesEmployeeIdExist(id))
         {
             return (false, "Employee ID does not exist");
         }

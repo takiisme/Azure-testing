@@ -52,7 +52,7 @@ public class EmployeeController : ControllerBase
     [HttpDelete("deleteEmployee/{employeeID}")]
     public async Task<IActionResult> DeleteEmployeeId([FromRoute] int employeeID)
     {
-        var (success, result) = await _employeeService.DelEmployee(employeeID);
+        var (success, result) = await _employeeService.DeleteEmployee(employeeID);
         if (!success)
         {
             return Ok("Does not exist employee!");
