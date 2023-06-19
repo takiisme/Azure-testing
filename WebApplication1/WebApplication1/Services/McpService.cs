@@ -68,7 +68,7 @@ public class McpService : IMcpService
     {
         var result = new List<Mcp>();
 
-        var mcpInRange = _dbContext.Mcps.Where(mcp =>
+        var mcpInRange = _dbContext.Mcps.ToList().Where(mcp =>
             Math.Pow((double.Parse(mcp.Latitude) - Convert.ToDouble(latitude)), 2) +
             Math.Pow((double.Parse(mcp.Longitude) - Convert.ToDouble(longitude)), 2) <=
             Math.Pow(radius, 2));
