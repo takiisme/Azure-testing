@@ -27,4 +27,17 @@ public class MessageController : ControllerBase
         
         return Ok("Post id: " + addMessageRequest.Id);
     }
+
+    [HttpPut("change-message-content")]
+    public async Task<IActionResult> UpdateMessageContent(UpdateMessageRequest updateMessageRequest)
+    {
+        var (success, result) =
+            await _messageService.UpdateMessageContent(updateMessageRequest.Id, updateMessageRequest.TextContent);
+        if (!success)
+        {
+            return Ok("Message change failed");
+        }
+        
+        return Ok("Message content updated!");
+    }
 }

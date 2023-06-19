@@ -7,6 +7,8 @@ public interface IMessageService
 {
     public Task<(bool success, object result)> AddMessage(int id, int senderId, int receiverId, DateTime textTime,
         string textContent);
+
+    public Task<(bool success, object result)> UpdateMessageContent(int id, string textContent);
 }
 
 public class MessageService : IMessageService
@@ -41,6 +43,20 @@ public class MessageService : IMessageService
         };
 
         _dbContext.Messages.Add(messageInformation);
+        _dbContext.SaveChanges();
+        return (true, "Success");
+    }
+
+    public async Task<(bool success, object result)> UpdateMessageContent(int id, string textContent)
+    {
+        if (!_helperService.DoesMessageIdExist(id))
+        {
+            return (false, "Message does not exist");
+        }
+
+        var message = _dbContext.Messages.First((x) => x.Id == id);
+        message.TextContent = textContent;
+
         _dbContext.SaveChanges();
         return (true, "Success");
     }
