@@ -14,6 +14,7 @@ builder.Services.AddDbContext<DbContext>(o => o.UseSqlServer(builder.Configurati
 builder.Services.AddScoped<IMcpService, McpService>();
 builder.Services.AddScoped<IEmployeeService, EmployeeService>();
 builder.Services.AddScoped<IAuthenticateService, AuthenticateService>();
+builder.Services.AddScoped<IMessageService, MessageService>();
 builder.Services.AddSingleton<HelperService>();
 
 var app = builder.Build();

@@ -59,4 +59,17 @@ public class EmployeeController : ControllerBase
         }
         return Ok("Delete id: " + employeeID);
     }
+
+    [HttpPut("change-employee-role")]
+    public async Task<IActionResult> ChangeEmployeeRole(ChangeEmployeeRoleRequest changeEmployeeRoleRequest)
+    {
+        var (success, result) =
+            await _employeeService.ChangeEmployeeRole(changeEmployeeRoleRequest.Id, changeEmployeeRoleRequest.Role);
+        if (!success)
+        {
+            return Ok("Change employee role failed");
+        }
+
+        return Ok("Change successfully");
+    }
 }

@@ -6,6 +6,7 @@ public interface IEmployeeService
 {
     public Task<(bool success, object result)> AddEmployee(int id, string name, int gender, string role);
     public Task<(bool success, object result)> DeleteEmployee(int id);
+    public Task<(bool success, object result)> ChangeEmployeeRole(int id, string role);
 }
 
 public class EmployeeService : IEmployeeService
@@ -47,5 +48,18 @@ public class EmployeeService : IEmployeeService
         _dbContext.Remove(_dbContext.Employees.Single(x => x.Id == id));
         _dbContext.SaveChanges();
         return (true, message);
+    }
+
+    public async Task<(bool success, object result)> ChangeEmployeeRole(int id, string role)
+    {
+        if (!_helperService.DoesEmployeeIdExist(id))
+        {
+            return (false, "Employee ID does not exist");
+        }
+
+        var employee = _dbContext.Employees.First((x) => x.Id == id);
+        employee.Role = role;
+        _dbContext.SaveChanges();
+        return (true, "Success");
     }
 }
