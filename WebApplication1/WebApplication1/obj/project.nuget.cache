@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "4oST9mM7vjE0rMqROK/b9tA2HWq0U45a1oHzELgaAwFzjZqviKW0bGjoph7EVezRQ1Q3PfTjeQfjdPCmpTV7IQ==",
+  "dgSpecHash": "PWThcIQPYK7n3TlY78w/+44JdC3ML6bhWI+sgTgTUEXtf5d3BypiXP00ZatE7KRWWZaZc/7+gnZL7WZ947e9aw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Tai\\OneDrive\\Desktop\\Azure_testing\\WebApplication1\\WebApplication1\\WebApplication1.csproj",
+  "projectFilePath": "C:\\Users\\Tai\\OneDrive\\Desktop\\Testing-azure\\WebApplication1\\WebApplication1\\WebApplication1.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Tai\\.nuget\\packages\\azure.core\\1.25.0\\azure.core.1.25.0.nupkg.sha512",
     "C:\\Users\\Tai\\.nuget\\packages\\azure.identity\\1.7.0\\azure.identity.1.7.0.nupkg.sha512",
